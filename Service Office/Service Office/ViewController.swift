@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, WKUIDelegate{
+    @IBOutlet weak var webView: WKWebView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.webView.uiDelegate = self
     }
 
 
